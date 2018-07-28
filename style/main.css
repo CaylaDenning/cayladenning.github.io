@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar|Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  overflow-x:hidden;
+}
+h1, h2, h3, h4 {
+  font-family: 'Eczar', serif;
+  opacity: 0.9;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0.7;
+}
+
+#post-preview {
+  list-style-type: none;
+}
+
+/* Nav */
+.nav-items {
+  background-color: white;
+
+  padding: 0px;
+
+  /* Makes this a fixed top nav bar */
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 500;
+}
+
+.nav-bucket {
+
+  padding: 15px;
+
+  display: block;
+  width: 60px;
+  float: left;
+
+  background-color: white;
+  opacity: 1.0;
+}
+
+
+/* Main Content */
+#mainContent {
+
+  width: 800px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#projectBanner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Link styles */
+a {
+  color: #211eb4;
+
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0.8;
+  z-index: 10; // or whatever number that is a positive real number.
+
+}
+
+a:hover {
+  color: #d60568;
+}
+
+a:active {
+  color: #d60568;
+}
+
+
+/* Footer */
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+footer img {
+  width: 28px;
+  height: 28px;
+  padding-left: 5px;
+  padding-right: 5px;
+  filter: brightness(0%) opacity(70%);
+}
+
+
+
+
+/* Tablet kinda adjustments */
+@media screen and (max-width: 910px) {
+
+  #mainContent {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+
+  #mainContent img {
+    width: 300px;
+  }
+}
+
+/** Moible adjustments */
+@media screen and (max-width: 400px) {
+  .nav-items {
+    text-align: center;
+  }
+
+  .nav-bucket {
+    padding: 5px;
+    float: none;
+  }
+
+  #mainContent {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+
+  }
+
+  #mainContent img {
+    width: 270px;
+  }
+}
