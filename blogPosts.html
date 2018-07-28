@@ -1,15 +1,48 @@
 ---
-layout: page
+#layout: page
 title: Blog
-permalink: /blog/
+permalink: blog/
 ---
 
+<link rel="stylesheet" href="../style/main.css">
+
+<body>
+
+  <div id="mainContent">
+
+    <div class="nav-items">
+
+      <div class="nav-bucket">
+        <a href="#mainContent">Home</a>
+      </div>
+
+      <div class="nav-bucket">
+        <a href="media/BenHoffman_Resume.pdf" target="_blank">Resume</a>
+      </div>
+      <div class="nav-bucket">
+        <a href="/blog/">Blog</a>
+      </div>
+
+    </div>  <!-- end nav items -->
+
+{% for post in site.posts %}
+  <h1>Posts</h1>
+
+  <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+  <p>{{ post.excerpt }} </p>
+
+{% endfor %}
+
+</div> <!-- End main content -->
+
+<footer>
+
+  <a href="https://github.com/benjafriend" target="_blank"><img src="..\media\GitHub-Mark-32px.png" lat="GitHub Logo"/></a>
+  <a href="https://www.linkedin.com/in/ben-hoffman/" target="_blank"><img src="..\media\white-linkedin-512.png" lat="linkedin Logo"/></a>
+  <a href="https://twitter.com/benjafriend" target="_blank"><img src="..\media\twitter_logo.png" lat="Twitter Logo"/></a>
+
+</footer>
 
 
 
-  {% for post in site.posts %}
-<h1>Posts</h1>
-      <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-      <p>{{ post.excerpt }} </p>
-
-  {% endfor %}
+</body>
