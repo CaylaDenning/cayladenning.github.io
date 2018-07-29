@@ -18,7 +18,8 @@ email: benjmain.hoffman.dev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ben Hoffman -- Game Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://benjafriend.github.io/benhoffman.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://benjafriend.github.io/benhoffman.github.io" 
+# the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: BenjaFriend
 github_username:  benjafriend
 
