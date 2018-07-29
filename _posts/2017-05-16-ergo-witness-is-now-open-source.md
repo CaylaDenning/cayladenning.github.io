@@ -4,8 +4,6 @@ title: Ergo Witness is now open source!
 date: 2017-05-16T03:59:30+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=442
-permalink: /index.php/2017/05/16/ergo-witness-is-now-open-source/
 categories:
   - data vis
   - ergowitness

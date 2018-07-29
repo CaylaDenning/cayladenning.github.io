@@ -4,8 +4,6 @@ title: Aurum Kings released on Steam!
 date: 2018-07-25T02:16:02+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=820
-permalink: /index.php/2018/07/25/aurum-kings-released-on-steam/
 categories:
   - aurumkings
   - General

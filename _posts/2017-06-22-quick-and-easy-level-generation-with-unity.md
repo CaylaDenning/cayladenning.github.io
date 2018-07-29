@@ -4,8 +4,6 @@ title: Quick and easy level generation with Unity
 date: 2017-06-22T12:32:59+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=445
-permalink: /index.php/2017/06/22/quick-and-easy-level-generation-with-unity/
 categories:
   - General
 ---

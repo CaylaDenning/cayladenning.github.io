@@ -4,8 +4,6 @@ title: 'Black Hole Game &#8211; Spring Break Jam'
 date: 2017-03-27T09:05:49+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=371
-permalink: /index.php/2017/03/27/black-hole-game-spring-break-jam/
 categories:
   - General
   - project

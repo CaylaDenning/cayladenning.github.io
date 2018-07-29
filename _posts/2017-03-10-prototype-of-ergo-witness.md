@@ -4,8 +4,6 @@ title: 'Prototype of &#8220;Ergo Witness&#8221;'
 date: 2017-03-10T22:33:08+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=353
-permalink: /index.php/2017/03/10/prototype-of-ergo-witness/
 categories:
   - data vis
   - ergowitness

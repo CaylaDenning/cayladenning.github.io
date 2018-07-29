@@ -4,8 +4,6 @@ title: RIT Game Development Club
 date: 2017-03-05T07:15:48+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=350
-permalink: /index.php/2017/03/05/rit-game-development-club/
 categories:
   - General
 ---

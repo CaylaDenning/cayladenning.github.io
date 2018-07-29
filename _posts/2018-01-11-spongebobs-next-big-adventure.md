@@ -4,8 +4,6 @@ title: 'SpongeBob&#8217;s Next Big Adventure'
 date: 2018-01-11T03:56:08+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=703
-permalink: /index.php/2018/01/11/spongebobs-next-big-adventure/
 categories:
   - General
 ---

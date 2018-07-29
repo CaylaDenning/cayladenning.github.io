@@ -4,8 +4,6 @@ title: Ergo Witness Update
 date: 2017-04-19T09:46:02+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=434
-permalink: /index.php/2017/04/19/ergo-witness-update/
 categories:
   - data vis
   - ergowitness

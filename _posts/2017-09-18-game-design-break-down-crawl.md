@@ -4,8 +4,6 @@ title: 'Game Design Break Down: Crawl'
 date: 2017-09-18T11:43:13+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=497
-permalink: /index.php/2017/09/18/game-design-break-down-crawl/
 image: /wp-content/uploads/2017/09/crawLogo.gif
 categories:
   - General
@@ -36,11 +34,11 @@ Another dynamic that is created from this is one between the ghosts, where there
 
 Players can collect three types of resources
 
-  * Gold 
+  * Gold
       * Used only when you are the human player to purchase weapons, armor, and power ups. This is collected constantly by defeating enemies or dealing damage to the human player.
-  * Wrath 
+  * Wrath
       * This is collected by the ghost players when he human player levels up. This is used to progress through an ability tree to become stronger as a ghost.
-  * Energy 
+  * Energy
       * This is collected by the ghost players when the environment is destroyed. This is used to spawn small minions that the ghosts can then poses and attack the player with.
 
 &nbsp;

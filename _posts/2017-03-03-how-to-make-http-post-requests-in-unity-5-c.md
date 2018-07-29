@@ -4,8 +4,6 @@ title: 'How to make HTTP GET/POST Requests in Unity 5 C#'
 date: 2017-03-03T12:11:54+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=346
-permalink: /index.php/2017/03/03/how-to-make-http-post-requests-in-unity-5-c/
 categories:
   - Demo
   - General

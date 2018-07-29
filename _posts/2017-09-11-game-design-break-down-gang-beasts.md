@@ -4,8 +4,6 @@ title: 'Game Design Break Down: Gang Beasts'
 date: 2017-09-11T07:22:34+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=449
-permalink: /index.php/2017/09/11/game-design-break-down-gang-beasts/
 image: /wp-content/uploads/2017/09/gangbeast.jpg
 categories:
   - General

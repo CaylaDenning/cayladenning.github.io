@@ -4,8 +4,6 @@ title: Cool Pallet Tools
 date: 2018-02-22T02:27:40+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=734
-permalink: /index.php/2018/02/22/cool-pallet-tools/
 categories:
   - General
 ---

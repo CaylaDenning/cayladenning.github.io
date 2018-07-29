@@ -15,7 +15,7 @@ The project that I am currently working on calls for being able to parse <a href
 
 However, if you are new to JSON and the utility in Unity, then it can be a bit confusing to set up the C# code with more complex JSON data.<figure id="attachment_290" style="width: 398px" class="wp-caption alignnone">
 
-<a href="http://benhoffman.tech/index.php/2017/02/08/json-data-in-unity/exampleoutput_li/" rel="attachment wp-att-290"><img class="size-full wp-image-290" src="https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/exampleOutput_LI.jpg?resize=398%2C430" alt="example output" width="398" height="430" srcset="https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/exampleOutput_LI.jpg?w=398 398w, https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/exampleOutput_LI.jpg?resize=278%2C300 278w" sizes="(max-width: 398px) 85vw, 398px" data-recalc-dims="1" /></a><figcaption class="wp-caption-text">Example output from my Log Files</figcaption></figure> 
+<a href="http://benhoffman.tech/index.php/2017/02/08/json-data-in-unity/exampleoutput_li/" rel="attachment wp-att-290"><img class="size-full wp-image-290" src="https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/exampleOutput_LI.jpg?resize=398%2C430" alt="example output" width="398" height="430" srcset="https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/exampleOutput_LI.jpg?w=398 398w, https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/exampleOutput_LI.jpg?resize=278%2C300 278w" sizes="(max-width: 398px) 85vw, 398px" data-recalc-dims="1" /></a><figcaption class="wp-caption-text">Example output from my Log Files</figcaption></figure>
 
 As you can see, there are a couple &#8216;children&#8217; in this JSON data like &#8220;_source&#8221; and &#8220;beat&#8221;, and also an array called &#8220;hits&#8221;.  To set this up in C# is very simple, but it is lacking the actual Unity Documentation.
 
@@ -24,7 +24,7 @@ public class Json_Data
 {
  public int took;
  public bool timed_out;
- public HitsParent hits; 
+ public HitsParent hits;
 }
 
 [System.Serializable]

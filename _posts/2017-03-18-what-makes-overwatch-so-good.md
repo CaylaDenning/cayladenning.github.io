@@ -4,8 +4,6 @@ title: What makes Overwatch so good?
 date: 2017-03-18T10:55:18+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=357
-permalink: /index.php/2017/03/18/what-makes-overwatch-so-good/
 categories:
   - General
   - Reviews

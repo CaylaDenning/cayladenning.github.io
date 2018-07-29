@@ -4,8 +4,6 @@ title: Data Visualization with the ELK stack and Unity
 date: 2017-02-15T06:36:33+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=284
-permalink: /index.php/2017/02/15/data-visualization-with-the-elk-stack-and-unity/
 categories:
   - General
   - project

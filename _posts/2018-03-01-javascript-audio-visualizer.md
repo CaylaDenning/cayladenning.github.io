@@ -4,8 +4,6 @@ title: Javascript Audio Visualizer
 date: 2018-03-01T00:10:58+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=736
-permalink: /index.php/2018/03/01/javascript-audio-visualizer/
 categories:
   - data vis
   - General

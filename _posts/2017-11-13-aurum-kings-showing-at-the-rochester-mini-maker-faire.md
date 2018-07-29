@@ -4,8 +4,6 @@ title: 'Aurum Kings &#8211; Showing at the Rochester Mini Maker Faire!'
 date: 2017-11-13T02:48:21+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=557
-permalink: /index.php/2017/11/13/aurum-kings-showing-at-the-rochester-mini-maker-faire/
 categories:
   - aurumkings
   - General

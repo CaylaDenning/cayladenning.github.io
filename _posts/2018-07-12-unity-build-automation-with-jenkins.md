@@ -4,8 +4,6 @@ title: Unity build automation with Jenkins
 date: 2018-07-12T20:59:32+00:00
 author: Ben Hoffman
 layout: post
-guid: http://benhoffman.tech/?p=802
-permalink: /index.php/2018/07/12/unity-build-automation-with-jenkins/
 categories:
   - General
 tags:
