@@ -8,9 +8,12 @@ categories:
   - General
   - project
 ---
-<a href="http://benhoffman.tech/index.php/my-skills-and-experience/unity-projects__trashed/unity/" rel="attachment wp-att-80"><img class="aligncenter size-medium wp-image-80" src="https://i0.wp.com/benhoffman.tech/wp-content/uploads/2016/08/unity.png?resize=300%2C109" alt="" width="300" height="109" srcset="https://i0.wp.com/benhoffman.tech/wp-content/uploads/2016/08/unity.png?resize=300%2C109 300w, https://i0.wp.com/benhoffman.tech/wp-content/uploads/2016/08/unity.png?w=676 676w" sizes="(max-width: 300px) 85vw, 300px" data-recalc-dims="1" /></a>
 
-<a href="http://benhoffman.tech/index.php/2017/02/15/data-visualization-with-the-elk-stack-and-unity/elk/" rel="attachment wp-att-299"><img class="aligncenter size-medium wp-image-299" src="https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/ELK.png?resize=300%2C100" alt="Elk stack picture" width="300" height="100" srcset="https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/ELK.png?resize=300%2C100 300w, https://i1.wp.com/benhoffman.tech/wp-content/uploads/2017/02/ELK.png?w=600 600w" sizes="(max-width: 300px) 85vw, 300px" data-recalc-dims="1" /></a>Not many people use Unity(or really any game engine) for data visualization. I think that the main reason for this is that Unity is not marketed as a data visualization tool, and there is already a large market for such things that companies would rather use. I am currently exploring the different possibilities for interactive data visualization using Unity and the [Logstash](https://www.elastic.co/products/logstash) pipeline. Logstash is just one part of something much bigger called the ELK stack(Elasticsearch, Logastah, and Kibana).
+
+![Deploy Key Screen]({{ site.url }}\media\posts\elk\ELK-300x100.png)
+
+
+Not many people use Unity(or really any game engine) for data visualization. I think that the main reason for this is that Unity is not marketed as a data visualization tool, and there is already a large market for such things that companies would rather use. I am currently exploring the different possibilities for interactive data visualization using Unity and the [Logstash](https://www.elastic.co/products/logstash) pipeline. Logstash is just one part of something much bigger called the ELK stack(Elasticsearch, Logastah, and Kibana).
 
 For more information on what exactly the ELK stack is, or want a great guide to installing it, check out my friend&#8217;s website <a href="https://holdmybeer.xyz/2017/01/24/intro-to-the-elk-stack-on-centos-7/" target="_blank">for help</a>. This was a HUGE resource for me when it came to installing the ELK stack on <a href="https://www.centos.org/" target="_blank">CentOS </a>(which I have never used before 3 days ago) .
 
