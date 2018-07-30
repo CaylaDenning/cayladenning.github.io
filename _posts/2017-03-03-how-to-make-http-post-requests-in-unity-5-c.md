@@ -29,7 +29,8 @@ The WWW class is simple and easy to use, but you will need a couple things first
 
 Here is a co-routine that will make a request, and wait for it to finish before moving along.
 
-<pre>private IEnumerator PostJsonData(){
+```
+private IEnumerator PostJsonData(){
  // The URL of the server, and the port
  string url = "http://&lt;myURL&gt;:&lt;my Port&gt;";
 
@@ -65,7 +66,8 @@ Here is a co-routine that will make a request, and wait for it to finish before
  // Handle there being an error
  Debug.Log("There was an error in the request");
  }
-}</pre>
+}
+```
 
 Now that you have your JSON data in string format, you can use Unity&#8217;s <a href="https://docs.unity3d.com/ScriptReference/JsonUtility.html" target="_blank">JSON Utility class</a> to turn it into a C# data object. I have another post about doing that [here](http://benhoffman.tech/index.php/2017/02/08/json-data-in-unity/).
 
