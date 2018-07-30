@@ -29,7 +29,7 @@ permalink: blog/
       <h1>Posts</h1>
 
       {% for post in site.posts %}
-        <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+        <a href="{{ site.url }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
         <p>{{ post.excerpt }} </p>
       {% endfor %}
 
