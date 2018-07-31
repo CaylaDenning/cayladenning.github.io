@@ -1,5 +1,4 @@
-{
-	"projects": [{
+[{
 			"title": "Aurum Kings",
 			"tools": "C#, Unity",
 			"image": "media/AurumKings_banner_600x150.jpg",
@@ -50,4 +49,3 @@
 				}
 
 	]
-}
