@@ -24,30 +24,26 @@ layout: default
 </div> <!-- End about -->
 
 
-{% for project in site.data.projects %}
-  <div id="projectInfo">
-    <h2 id="projectTitle">{{ project.title }} ({{ project.tools}})</h2>
-
-    <img id="projectBanner" src={{ project.image }} />
-
-    <p>{{ project.description }}</p>
-
-    <div id="projectLinks">
-      {% for link in project.links %}
-
-      <p>- <a href={{ link.value }} target="_blank"> {{ link.name }} </a></p>
-
-      {% endfor %}
-    </div> <!-- End project links -->
-
-  </div> <!-- End Project Info -->
-{% endfor %}
-
-
 <!-- Container Div that will have dynamically generated projects in it -->
 <div id="projects">
-
   <h1>My Work</h1>
+  {% for project in site.data.projects %}
+    <div id="projectInfo">
+      <h2 id="projectTitle">{{ project.title }} ({{ project.tools}})</h2>
 
+      <img id="projectBanner" src={{ project.image }} />
+
+      <p>{{ project.description }}</p>
+
+      <div id="projectLinks">
+        {% for link in project.links %}
+
+        <p>- <a href={{ link.value }} target="_blank"> {{ link.name }} </a></p>
+
+        {% endfor %}
+      </div> <!-- End project links -->
+
+    </div> <!-- End Project Info -->
+  {% endfor %}
 
 </div> <!-- End projects -->
