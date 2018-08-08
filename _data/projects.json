@@ -3,7 +3,8 @@
 			"tools": "C#, Unity",
 			"image": "media/AurumKings_banner_600x150.jpg",
 			"description": "Aurum Kings started out as a small game jam idea that has bloomed into a polished project that I released on Steam. I was the only one to work on this project doing everything from gameplay programming to level design and modeling in Blender. For the music, my friend Rowan Waring did several compositions for each level.",
-			"links": [{
+			"links": [
+				{
 					"name": "Dev Blog",
 					"value": "https://bullhorngames.com"
 				},
@@ -18,7 +19,8 @@
   			"tools": "Haxe",
   			"image": "media/sponge_banner.png",
   			"description": "During my time at Workinman I was guided underneath senior developers, designers, and artists to create a web based game for one of the companies clients. Some of the features that I implemented in <i>Spongebob's Next Big Adventure</i> include a questing system,  inventory system, and narrative content. This experience exposed me to the full game development pipeline in a challenging and fast paced team environment. ",
-  			"links": [{
+  			"links": [
+					{
   					"name": "Workinman Website",
   					"value": "https://workinman.com/"
   				},
@@ -32,8 +34,9 @@
 					"title": "Ergo Witness",
 					"tools": "C#, Unity, Elasticsearch",
 					"image": "media/ErgoWitness_banner.png",
-					"description": "Ergo Witness is a network visualisation tool that shows network data in a creative way in 3D spaces. On the backend, the data is gathered by running tools like Bro, Packetbeat, and Snort, and pushing their logs in JSON format to the ELK stack (Elasticsearch). The ‘front end’ as I call it, is developed in the Unity game engine, pulling the information it needs down from the server with HTTP requests. By using a game engine like Unity to represent network data, there are not only possibilities of fun, interactive data analysis, but also the beginning of what could possibly be a very powerful Virtual Reality toolkit for network professionals.  ",
-					"links": [{
+					"description": "Ergo Witness is a network visualisation tool that shows network data in a creative way. On the backend, the data is gathered by running tools like Bro, Packetbeat, and Snort, and pushing their logs in JSON format to the ELK stack (Elasticsearch). The ‘front end’ as I call it, is developed in the Unity game engine, pulling the information it needs down from the server with HTTP requests. By using a game engine like Unity to represent network data, there are not only possibilities of fun, interactive data analysis, but also the beginning of what could possibly be a very powerful Virtual Reality toolkit for network professionals.  ",
+					"links": [
+						{
 							"name": "Info Site",
 							"value": "http://ergowitness.info/"
 						},
