@@ -110,10 +110,12 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
 /* Link styles */
 a {
   color: #211eb4;
-
   font-family: 'Open Sans', sans-serif;
   opacity: 0.8;
   z-index: 10; // or whatever number that is a positive real number.
+
+  transition: color .3s ease;
+  -moz-transition: color .3s ease;
 
 }
 
