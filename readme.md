@@ -26,3 +26,7 @@ If you run into issues try this command:
 `bundle update jekyll`
 
 `gem update jekyll`
+
+To run Jekyll
+
+`jekyll serve --watch`
