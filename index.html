@@ -47,3 +47,20 @@ layout: default
   {% endfor %}
 
 </div> <!-- End projects -->
+
+<div id="otherInfo">
+
+<h1>Other Stuff About Me</h1>
+
+{% for item in site.data.otherStuff %}
+  <div id="projectInfo">
+    <h2 id="projectTitle">{{ item.title }} ({{ item.tools}})</h2>
+
+    <img id="projectBanner" src={{ item.image }} />
+
+    <p>{{ item.description }}</p>
+
+  </div> <!-- End Project Info -->
+{% endfor %}  <!-- end other stuff -->
+
+</div>  <!--  End other stuff about me-->
