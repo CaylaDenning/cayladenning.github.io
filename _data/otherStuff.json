@@ -4,17 +4,5 @@
 				"tools": "C++",
 				"image": "media/rit_logo.jpg",
 				"description": "Currently I am the Teaching Assistant for Data Structures and Algorithms I, a class all about C++. I assist students in learning the fundamental things about the language like dynamic memory management, using STL, and much more. The reason that I really enjoy this position is because I am constantly learning and problem solving situations that I otherwise would not have encountered. It gives me a lot of practice looking at other people's code as well! "
-			},
-			{
-					"title": "RIT Game Development Club",
-					"tools": "",
-					"image": "media/rgdc_logo.png",
-					"description": "Throughout my time at RIT I have put a lot of energy into the Game Development club on campus. The focus of the club is to provide students with a collaborative environment to work on their game projects together. I do things like give demos on how to use Unity, organize game jams, and provide an interface for the local game dev community to the students.",
-					"links": [
-						{
-							"name": "Club Site",
-							"value": "http://ritgamedev.club"
-						}
-					]
-				}
+			}
 	]
