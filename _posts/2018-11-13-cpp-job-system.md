@@ -36,3 +36,61 @@ got the idea for using those features in this Job System.
 [`std::future`](https://en.cppreference.com/w/cpp/thread/future)
 
 [`std::promise`](https://en.cppreference.com/w/cpp/thread/promise)
+
+
+# Implementation
+_* To see the full project, check it out on [GitHub](https://github.com/engine-buddies/light-vox-engine/tree/ben/Light%20Vox%20Engine/JobSystem)_
+
+
+First of all, I needed to define what a "Job" was going to be in this system.
+A "Job" is basically a function pointer, but it must be able to be generic
+so that any class or sub system can "jobify" their methods. To solve this problem
+I took a polymorphic approach where an `IJob` must be inherited from.
+
+```C++
+struct IJob {
+    virtual ~IJob() {}
+    virtual bool invoke( void* args, int aIndex ) = 0;
+};
+```
+
+This allowed me to have two child classes, one for member functions and one for
+non-member function.
+
+```C++
+
+struct JobFunc : IJob {
+    JobFunc( void( *aFunc_ptr )( void*, int ) )
+    : func_ptr( aFunc_ptr ) { }
+
+    virtual bool invoke( void* args, int aIndex ) override {
+        func_ptr( args, aIndex );
+        return true;
+    }
+
+    /** The function pointer for this job to invoke */
+    void( *func_ptr )( void*, int );
+};
+
+template <class T>
+struct JobMemberFunc : IJob {
+    JobMemberFunc( T* aParent, void ( T::*f )( void*, int ) ) {
+        parentObj = aParent;
+        func_ptr = f;
+    }
+
+    virtual bool invoke( void* args, int aIndex ) override {
+        if ( !parentObj ) { return false; }
+
+        ( parentObj->*func_ptr )( args, aIndex );
+        return true;
+    }
+
+    /** the object to invoke the function pointer on */
+    T* parentObj;
+
+    /** The function pointer to call when we invoke this function */
+    void ( T::*func_ptr )( void*, int );
+};
+
+```
