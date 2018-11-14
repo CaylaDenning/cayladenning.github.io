@@ -31,13 +31,6 @@ Jason Jurecka. During his talk, he mentions a Task Manager that he uses
 `std::future` and `std::promise` to keep track of tasks, and this is where I
 got the idea for using those features in this Job System.
 
-# C++ 11 Features
-
-[`std::future`](https://en.cppreference.com/w/cpp/thread/future)
-
-[`std::promise`](https://en.cppreference.com/w/cpp/thread/promise)
-
-
 # Implementation
 _* To see the full project, check it out on [GitHub](https://github.com/engine-buddies/light-vox-engine/tree/ben/Light%20Vox%20Engine/JobSystem)_
 
@@ -94,3 +87,13 @@ struct JobMemberFunc : IJob {
 };
 
 ```
+
+
+
+
+
+# C++ 11 Features
+
+[`std::future`](https://en.cppreference.com/w/cpp/thread/future)
+
+[`std::promise`](https://en.cppreference.com/w/cpp/thread/promise)
