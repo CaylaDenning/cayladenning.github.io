@@ -11,16 +11,14 @@ categories:
 
 Over the course of the last semester I have been working on a team to
 create a multi-threaded engine using DirectX 12, with a focus on data
-oriented design.
-
-One of my tasks throughout the creation of this engine was to create a
+oriented design. One of my tasks throughout the creation of this engine was to create a
 Job System that we can use to parallelize tasks like physics calculations. This
 system came with a couple of constraints:
 
 * There needs to be a way to track the completion of tasks, to avoid data races
   when sending things like position data of an entity to the GPU.
 * The Job System needs to have a simple interface that takes a `void *` as
-  and argument, as to match some of the same data types with an SDK that
+  an argument, so that it would match some of the same data layout of an SDK that
   is being used with the project.
 * It must be portable code that will work in both a Windows and UNIX based
   environment.
@@ -85,10 +83,38 @@ struct JobMemberFunc : IJob {
     /** The function pointer to call when we invoke this function */
     void ( T::*func_ptr )( void*, int );
 };
-
 ```
 
+Now that I have a definition of what a `Job` actually is, I want to be able to
+store a queue of them for the worker threads to take tasks from. To so this, I
+defined at `CpuJob` struct:
 
+```C
+struct CpuJob {
+    IJob* jobPtr = nullptr;
+    void* jobArgs = nullptr;
+    int index = 0;
+};
+```
+
+I do this so that I can easily store both the function pointer to the job, and
+the arguments that need to be passed in. This does come add a limitation to the
+system that if you were to pass in an argument that was allocated on the stack,
+then it could cause problems when actually executing the job.
+
+With the `CpuJob` definition, I can now store a queue of `CpuJob`'s and make a
+simple interface for adding jobs. In order to eliminate the most contention, the
+queue should be a lockless queue. Check out
+[Velan Studios' lock free implementation](https://www.velanstudios.com/blog/posts/our-first-open-source-release.html)
+if you are interested in that.  
+
+Now that there is a base for a simple job system, I needed a way to actually
+track the completion of the Jobs. The reason for this is because if we have
+physics calculations, they need to happen before we can send that data to the
+GPU in order to avoid race conditions.
+
+To accomplish this, I used `std::future` and `std::promise`, which is not something
+that I have seen a lot of other Job System's use to control their flow of jobs.
 
 
 
