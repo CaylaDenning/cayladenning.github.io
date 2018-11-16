@@ -116,7 +116,31 @@ GPU in order to avoid race conditions.
 To accomplish this, I used `std::future` and `std::promise`, which is not something
 that I have seen a lot of other Job System's use to control their flow of jobs.
 
+The workflow of doing this is simple, you just need to create a promise
+and store it's future in a variable. Then, you can pass a pointer to that
+promise and have your job call the `set_value()` function when it is complete,
+effectively signaling to the dependent thread that the job is done.  
 
+Here is an example:
+
+```C++
+void Solver::Update () {
+    std::promise<void> aPromise;
+    std::future<void> aFuture = aPromise.get_future();
+    jobManager->AddJob( this, &Physics::Solver::AccumlateForces, ( void* ) ( a_argument ), 0 );
+    aFuture.wait(); // This is a blocking function that will wait for that promise
+                    // to be fulfilled
+}
+```
+Where inside the job function:
+
+```C++
+void Solver::AccumlateForces( void* args, int index ) {
+    PhysicsArguments* myArgs = static_cast< PhysicsArguments* >( args );
+    // Some kind of work for this thread...
+    myArgs->jobPromise->set_value();    // Signal that this job is done
+}
+```
 
 # C++ 11 Features
 
