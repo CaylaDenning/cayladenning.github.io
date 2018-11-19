@@ -15,7 +15,7 @@ oriented design. One of my tasks throughout the creation of this engine was to c
 Job System that we can use to parallelize tasks like physics calculations. This
 system came with a couple of constraints:
 
-* There needs to be a way to track the completion of tasks, to avoid data races
+* There needs to be a way to track the completion of tasks, to help avoid data races
   when sending things like position data of an entity to the GPU.
 * The Job System needs to have a simple interface that takes a `void *` as
   an argument, so that it would match some of the same data layout of an SDK that
@@ -25,18 +25,18 @@ system came with a couple of constraints:
 
 During my research of how to go about building a job system, I came across
 [this](https://www.youtube.com/watch?v=8AjRD6mU96s&t=1532s) CppCon talk by
-Jason Jurecka. During his talk, he mentions a Task Manager that he uses
-`std::future` and `std::promise` to keep track of tasks, and this is where I
-got the idea for using those features in this Job System.
+Jason Jurecka. During his talk, he mentions a Task Manager where he uses
+`std::future` and `std::promise` to keep track of tasks. This seemed like a good
+starting concept for me to base my own job system on.
 
 # Implementation
-_* To see the full project, check it out on [GitHub](https://github.com/engine-buddies/light-vox-engine/tree/ben/Light%20Vox%20Engine/JobSystem)_
+_* Check out the full project on [GitHub](https://github.com/engine-buddies/light-vox-engine/)_
 
 
-First of all, I needed to define what a "Job" was going to be in this system.
-A "Job" is basically a function pointer, but it must be able to be generic
-so that any class or sub system can "jobify" their methods. To solve this problem
-I took a polymorphic approach where an `IJob` must be inherited from.
+First of all, I needed to define what a _job_ was going to be in this system.
+A job is basically a function pointer, but it needs to be generic so that any
+class can use the job system. To solve this problem I took a polymorphic
+approach where an `IJob` is an abstract definition of the job type.
 
 ```C++
 struct IJob {
@@ -46,10 +46,10 @@ struct IJob {
 ```
 
 This allowed me to have two child classes, one for member functions and one for
-non-member function.
+non-member functions.
 
 ```C++
-
+/** Defintion for non-member functions */
 struct JobFunc : IJob {
     JobFunc( void( *aFunc_ptr )( void*, int ) )
     : func_ptr( aFunc_ptr ) { }
@@ -63,12 +63,11 @@ struct JobFunc : IJob {
     void( *func_ptr )( void*, int );
 };
 
+/** Defintion for member functions */
 template <class T>
 struct JobMemberFunc : IJob {
-    JobMemberFunc( T* aParent, void ( T::*f )( void*, int ) ) {
-        parentObj = aParent;
-        func_ptr = f;
-    }
+    JobMemberFunc( T* aParent, void ( T::*f )( void*, int ) )
+    : parentObj ( aParent ), func_ptr( f ) { }
 
     virtual bool invoke( void* args, int aIndex ) override {
         if ( !parentObj ) { return false; }
@@ -86,7 +85,7 @@ struct JobMemberFunc : IJob {
 ```
 
 Now that I have a definition of what a `Job` actually is, I want to be able to
-store a queue of them for the worker threads to take tasks from. To so this, I
+store a queue of them for the worker threads to take tasks from. To do this, I
 defined at `CpuJob` struct:
 
 ```C
@@ -100,7 +99,7 @@ struct CpuJob {
 I do this so that I can easily store both the function pointer to the job, and
 the arguments that need to be passed in. This does come add a limitation to the
 system that if you were to pass in an argument that was allocated on the stack,
-then it could cause problems when actually executing the job.
+then it could cause problems when actually invoking the job.
 
 With the `CpuJob` definition, I can now store a queue of `CpuJob`'s and make a
 simple interface for adding jobs. In order to eliminate the most contention, the
@@ -127,6 +126,7 @@ Here is an example:
 void Solver::Update () {
     std::promise<void> aPromise;
     std::future<void> aFuture = aPromise.get_future();
+    a_argument->jobPromise = &aPromise;     // a_argument is defined in this class
     jobManager->AddJob( this, &Physics::Solver::AccumlateForces, ( void* ) ( a_argument ), 0 );
     aFuture.wait(); // This is a blocking function that will wait for that promise
                     // to be fulfilled
@@ -141,6 +141,8 @@ void Solver::AccumlateForces( void* args, int index ) {
     myArgs->jobPromise->set_value();    // Signal that this job is done
 }
 ```
+
+
 
 # C++ 11 Features
 
