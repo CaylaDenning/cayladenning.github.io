@@ -108,9 +108,9 @@ queue should be a lockless queue. Check out
 if you are interested in that.  
 
 Now that there is a base for a simple job system, I needed a way to actually
-track the completion of the Jobs. The reason for this is because if we have
-physics calculations, they need to happen before we can send that data to the
-GPU in order to avoid race conditions.
+track the completion of the Jobs. The reason that we may want this is because if
+we have something like physics calculations, they need to happen before we can
+send that data to the GPU in order to avoid race conditions.
 
 To accomplish this, I used `std::future` and `std::promise`, which is not something
 that I have seen a lot of other Job System's use to control their flow of jobs.
@@ -142,7 +142,21 @@ void Solver::AccumlateForces( void* args, int index ) {
 }
 ```
 
+As you can see, I am just using a `future` of `void` type, so it is just acting
+as a kind of "flag". Another clear use case for these is to actually get return
+values from they with the `.get()` method on a `future` object. 
 
+One thing to watch out for here is the size of `std::future` and `std::promise`.
+It shouldn't really be a huge problem, but it is something to watch out for. On
+a 64-bit Ubuntu system:
+
+```
+Size of std::future<void>  : 16
+Size of std::promise<void> : 24
+```
+
+They are not huge objects but it is certainly something to be aware of if they
+are being used frequently.
 
 # C++ 11 Features
 
