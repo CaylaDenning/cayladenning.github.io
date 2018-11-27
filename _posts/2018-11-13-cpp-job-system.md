@@ -159,9 +159,22 @@ Size of std::promise<void> : 24
 They are not huge objects but it is certainly something to be aware of if they
 are being created frequently.
 
+## Conclusion
 
+By using the more modern C++ 11 features of `std::future` and `std::promise`,
+we can create a Job System that can easily make tracking jobs easier
+and more explicit to the users of that system.
 
-# C++ 11 Features
+One thing that I do want to add to this system is an abstraction layer where
+the user can just make some kind of "Job Sequence", making it even easier and
+more explicit of what operations are happening first. At this moment, the system
+assumes a level of knowledge about how `future`'s and `promise`'s work.
+
+I would love feedback about this system, or any thoughts on potential improvements.
+
+See the full project on [GitHub](https://github.com/engine-buddies/light-vox-engine/)!
+
+### C++ 11 Features
 
 [`std::future`](https://en.cppreference.com/w/cpp/thread/future)
 
