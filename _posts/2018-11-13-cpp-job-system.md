@@ -11,14 +11,14 @@ categories:
 
 Over the course of the last semester I have been working on a team to
 create a multi-threaded engine using DirectX 12, with a focus on data
-oriented design. One of my tasks throughout the creation of this engine was to create a
+oriented design. One of my tasks throughout development was to create a
 Job System that we can use to parallelize tasks like physics calculations. This
 system came with a couple of constraints:
 
-* There needs to be a way to track the completion of tasks, to help avoid data races
+* There needs to be a way to track the completion of tasks, to avoid data races
   when sending things like position data of an entity to the GPU.
 * The Job System needs to have a simple interface that takes a `void *` as
-  an argument, so that it would match some of the same data layout of an SDK that
+  an argument, and so that it would match some of the same data layout of an SDK that
   is being used with the project.
 * It must be portable code that will work in both a Windows and UNIX based
   environment.
@@ -103,7 +103,7 @@ then it could cause problems when actually invoking the job.
 
 With the `CpuJob` definition, I can now store a queue of `CpuJob`'s and make a
 simple interface for adding jobs. For the interface that I provide to my users I
-just created a simple template `AddJob` function that does this.
+just created a simple template `AddJob` function that adds to the job queue.
 In order to eliminate the most contention, the actual job queue should be a
 lockless queue. Check out [Velan Studios' lock free implementation](https://www.velanstudios.com/blog/posts/our-first-open-source-release.html)
 if you are interested in that.  
