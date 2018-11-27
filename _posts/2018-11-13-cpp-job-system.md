@@ -102,9 +102,10 @@ system that if you were to pass in an argument that was allocated on the stack,
 then it could cause problems when actually invoking the job.
 
 With the `CpuJob` definition, I can now store a queue of `CpuJob`'s and make a
-simple interface for adding jobs. In order to eliminate the most contention, the
-queue should be a lockless queue. Check out
-[Velan Studios' lock free implementation](https://www.velanstudios.com/blog/posts/our-first-open-source-release.html)
+simple interface for adding jobs. For the interface that I provide to my users I
+just created a simple template `AddJob` function that does this.
+In order to eliminate the most contention, the actual job queue should be a
+lockless queue. Check out [Velan Studios' lock free implementation](https://www.velanstudios.com/blog/posts/our-first-open-source-release.html)
 if you are interested in that.  
 
 Now that there is a base for a simple job system, I needed a way to actually
@@ -144,7 +145,7 @@ void Solver::AccumlateForces( void* args, int index ) {
 
 As you can see, I am just using a `future` of `void` type, so it is just acting
 as a kind of "flag". Another clear use case for these is to actually get return
-values from they with the `.get()` method on a `future` object. 
+values from they with the `.get()` method on a `future` object.
 
 One thing to watch out for here is the size of `std::future` and `std::promise`.
 It shouldn't really be a huge problem, but it is something to watch out for. On
@@ -156,7 +157,9 @@ Size of std::promise<void> : 24
 ```
 
 They are not huge objects but it is certainly something to be aware of if they
-are being used frequently.
+are being created frequently.
+
+
 
 # C++ 11 Features
 
