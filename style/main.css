@@ -24,7 +24,10 @@ p, ul, li {
   list-style-type: none;
 }
 
-
+#tools {
+    font-family: 'Eczar', serif;
+    opacity: 0.8;
+}
 
 
 /** CSS transitions from here: https://codepen.io/EvyatarDa/pen/waKXMd */

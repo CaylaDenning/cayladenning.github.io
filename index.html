@@ -25,18 +25,18 @@ layout: default
   <h1>My Work</h1>
   {% for project in site.data.projects %}
     <div id="projectInfo">
-      <h2 id="projectTitle">{{ project.title }} ({{ project.tools}})</h2>
+      <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
 
       <img id="projectBanner" src={{ project.image }} />
 
       <p>{{ project.description }}</p>
 
       <div id="projectLinks">
-        {% for link in project.links %}
-
-        <p>- <a href={{ link.value }} target="_blank"> {{ link.name }} </a></p>
-
-        {% endfor %}
+        {% if project.links %}
+            {% for link in project.links %}
+                <p>- <a href={{ link.value }} target="_blank"> {{ link.name }} </a></p>
+            {% endfor %}
+        {% endif %}
       </div> <!-- End project links -->
 
     </div> <!-- End Project Info -->
@@ -50,7 +50,7 @@ layout: default
 
 {% for item in site.data.otherStuff %}
   <div id="projectInfo">
-    <h2 id="projectTitle">{{ item.title }} ({{ item.tools}})</h2>
+    <h2 id="projectTitle">{{ item.title }} {% if item.tools %}<span id="tools">({{ item.tools}})</span> {% endif %}</h2>
 
     <img id="projectBanner" src={{ item.image }} />
 
