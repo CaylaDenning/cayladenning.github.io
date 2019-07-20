@@ -22,7 +22,7 @@ layout: default
 
 <!-- Container Div that will have dynamically generated projects in it -->
 <div id="projects">
-  <h1>My Work</h1>
+  <h1>What have I done?</h1>
   {% for project in site.data.projects %}
     <div id="projectInfo">
       <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
@@ -58,5 +58,6 @@ layout: default
 
   </div> <!-- End Project Info -->
 {% endfor %}  <!-- end other stuff -->
+
 
 </div>  <!--  End other stuff about me-->
