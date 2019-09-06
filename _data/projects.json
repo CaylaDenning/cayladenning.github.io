@@ -1,72 +1,14 @@
 [
+	
 	{
-		"title": "Epic Games",
-		"tools": "C++, Unreal Engine",
-		"image": "media/Unreal_Engine_Horiz_Black.png",
-		"description": "My time in the summer of 2019 has been spent as a Gameplay Programming Intern on the Unreal Engine gameplay framework team. I work alongside senior developers making various improvements to the Unreal Engine gameplay API as well as some work on <i>Fortnite</i>. ",
-		"links": [
-			{
-				"name": "Unreal Engine",
-				"value": "https://www.unrealengine.com/en-US/"
-			},
-			{
-				"name": "Fortnite",
-				"value": "https://www.epicgames.com/fortnite/en-US/play-now/battle-royale"
-			}
-		]
-		},
-	{
-	"title": "Aurum Kings",
-	"tools": "C#, Unity",
-	"image": "media/AurumKings_banner_600x150.jpg",
-	"description": "Aurum Kings started out as a small game jam idea that has bloomed into a polished project that I released on Steam. I was the only one to work on this project doing everything from gameplay programming to level design and modeling in Blender. For the music, my friend Rowan Waring did several compositions for each level.",
-	"links": [
-		{
-			"name": "Dev Blog",
-			"value": "https://bullhorngames.com"
-		},
-		{
-			"name": "Steam Page",
-			"value": "https://store.steampowered.com/app/848460/Aurum_Kings/"
-		}
-	]
+		"title": "Printer Head X",
+		"tools": "Software Y",
+		"description": "This is a length description of a printer you are talking about"
 	},
 	{
-		"title": "Spongebobs Next Big Adventure",
-		"tools": "Haxe",
-		"image": "media/sponge_banner.png",
-		"description": "During my time at Workinman I was guided by senior developers, designers, and artists to create a web based game for one of the companies clients. Some of the features that I implemented in <i>Spongebob's Next Big Adventure</i> include a questing system,  inventory system, and narrative content. This experience exposed me to the full game development pipeline in a challenging and fast paced team environment. ",
-		"links": 
-		[
-			{
-				"name": "Workinman Website",
-				"value": "https://workinman.com/"
-			},
-			{
-				"name": "Play the Game",
-				"value": "http://www.nick.com/spongebob-squarepants/games/spongebobs-next-big-adventure/"
-			}
-		]
-	},
-	{
-		"title": "Ergo Witness",
-		"tools": "C#, Unity, Elasticsearch",
-		"image": "media/ErgoWitness_banner.png",
-		"description": "Ergo Witness is a network visualisation tool that shows network data in a creative way. On the backend, the data is gathered by running tools like Bro, Packetbeat, and Snort, and pushing their logs in JSON format to the ELK stack (Elasticsearch). The ‘front end’ as I call it, is developed in the Unity game engine, pulling the information it needs down from the server with HTTP requests. By using a game engine like Unity to represent network data, there are not only possibilities of fun, interactive data analysis, but also the beginning of what could possibly be a very powerful Virtual Reality toolkit for network professionals.  ",
-		"links": [
-			{
-				"name": "Info Site",
-				"value": "http://ergowitness.info/"
-			},
-			{
-				"name": "GitHub",
-				"value": "https://github.com/BenjaFriend/ErgoWitness"
-			},
-			{
-				"name": "YouTube Demo",
-				"value": "https://www.youtube.com/watch?v=ylK-_RUaKJw"
-			}
-		]
+		"title": "Printer Head 2",
+		"tools": "Software Z",
+		"description": "This is a length description of a printer you are talking about"
 	}
 
 ]

@@ -3,22 +3,9 @@ layout: default
 ---
 
 <div id="about">
-
-  <h1>Ben Hoffman</h1>
-  <p>
-    Hey! I'm Ben Hoffman, a current student at the Rochester Institute of Technology.
-    I have always had a passion for video games, so I decided to make a career out of
-    them. I love learning new things and seeing how they apply to gaming.
-  </p>
-
-  <p>
-    One of the biggest reasons I love game development is because I look for
-    a challenge in the work that I do, and because the games industry moves so
-    fast, I think it is the perfect place for me to be.
-  </p>
-
+  <h1>Cayla Denning</h1>
+  <p>Mechanical Engineer</p>
 </div> <!-- End about -->
-
 
 <!-- Container Div that will have dynamically generated projects in it -->
 <div id="projects">
@@ -26,9 +13,9 @@ layout: default
   {% for project in site.data.projects %}
     <div id="projectInfo">
       <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
-
-      <img id="projectBanner" src={{ project.image }} />
-
+      {% if project.image %}
+        <img id="projectBanner" src={{ project.image }} />
+      {% endif %}
       <p>{{ project.description }}</p>
 
       <div id="projectLinks">
@@ -41,23 +28,4 @@ layout: default
 
     </div> <!-- End Project Info -->
   {% endfor %}
-
 </div> <!-- End projects -->
-
-<div id="otherInfo">
-
-<h1>Other Stuff About Me</h1>
-
-{% for item in site.data.otherStuff %}
-  <div id="projectInfo">
-    <h2 id="projectTitle">{{ item.title }} {% if item.tools %}<span id="tools">({{ item.tools}})</span> {% endif %}</h2>
-
-    <img id="projectBanner" src={{ item.image }} />
-
-    <p>{{ item.description }}</p>
-
-  </div> <!-- End Project Info -->
-{% endfor %}  <!-- end other stuff -->
-
-
-</div>  <!--  End other stuff about me-->
