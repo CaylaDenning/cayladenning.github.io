@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Blog
-permalink: blog/
+title: Research
+permalink: research/
 ---
 
-
 <div id="posts">
-  <h1>Posts</h1>
+  <h1>Research</h1>
 
   {% for post in site.posts %}
-    <a href="{{ site.url }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+  <!--- IF Post is in research category -->
+  <a href="{{ site.url }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

@@ -4,28 +4,5 @@ layout: default
 
 <div id="about">
   <h1>Cayla Denning</h1>
-  <p>Mechanical Engineer</p>
+  <p>This is cayla denning's bio laurm ipsom</p>
 </div> <!-- End about -->
-
-<!-- Container Div that will have dynamically generated projects in it -->
-<div id="projects">
-  <h1>What have I done?</h1>
-  {% for project in site.data.projects %}
-    <div id="projectInfo">
-      <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
-      {% if project.image %}
-        <img id="projectBanner" src={{ project.image }} />
-      {% endif %}
-      <p>{{ project.description }}</p>
-
-      <div id="projectLinks">
-        {% if project.links %}
-            {% for link in project.links %}
-                <p>- <a href={{ link.value }} target="_blank"> {{ link.name }} </a></p>
-            {% endfor %}
-        {% endif %}
-      </div> <!-- End project links -->
-
-    </div> <!-- End Project Info -->
-  {% endfor %}
-</div> <!-- End projects -->

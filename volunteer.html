@@ -1,0 +1,21 @@
+---
+layout: default
+title: Volunteer
+permalink: volunteer/
+---
+
+<div id="posts">
+  <h1>Volunteer</h1>
+
+  {% for post in site.posts %}
+  <!--- IF Post is in Volunteer category -->
+  <a href="{{ site.url }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ post.date | date: date_format }}
+      </time></p>
+    <p> {{ post.excerpt }} </p>
+  {% endfor %}
+
+</div> <!-- End Posts -->
