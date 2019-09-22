@@ -7,8 +7,9 @@ permalink: nasa/
 <div id="posts">
   <h1>NASA Projects</h1>
 
-  {% for post in site.posts %}
-  <!--- IF Post is in nasa category -->
+  {% for post in site.categories.NASA %}  
+
+  <!--- IF Post is in research category -->
   <a href="{{ site.url }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
