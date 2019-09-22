@@ -8,7 +8,7 @@ email: cnd6098@g.rit.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "//benhoffman.tech"
+url: "//cayladenning.me"
 
 # Build settings
 markdown: kramdown
