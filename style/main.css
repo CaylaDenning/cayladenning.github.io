@@ -118,6 +118,13 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 50px;
+
+  width: 800px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   text-align: center;
 }
 
@@ -188,6 +195,12 @@ pre {
         float: none;
     }
 
+    footer {
+      width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    
     #mainContent {
         width: 100%;
         padding-left: 5px;
