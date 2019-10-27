@@ -21,6 +21,27 @@ p, ul, li {
   font-size: 18px;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.container.borderXwidth a div#navText {
+  display: flex;
+}
+
+#navText .material-icons {
+  padding-right: .125em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 /** CSS transitions from here: https://codepen.io/EvyatarDa/pen/waKXMd */
 div.container {
     top: 0;
