@@ -151,6 +151,14 @@ footer img {
         margin-left: 0;
         margin-right: 0;
     }
+
+    .container.borderXwidth a div#navText {
+      display: block;
+    }
+    
+    .container {
+      display: block;
+    }
 }
 
 /** Moible adjustments */
@@ -172,5 +180,13 @@ footer img {
 
     #mainContent img {
         width: 270px;
+    }
+
+    .container.borderXwidth a div#navText {
+      display: block;
+    }
+    
+    .container {
+      display: block;
     }
 }
