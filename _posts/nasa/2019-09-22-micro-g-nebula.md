@@ -14,5 +14,6 @@ This device must be manually operated, seal a hole from .5” to 1”, and withs
 
 During NBL testing, the device performed successfully and was given high amounts of praise by both NASA engineers and the professional divers that used the device. 
 
-<img src="{{ site.url }}\media\nasa\nebula_1.png" lat="Nebula photo 1"/>
 <img src="{{ site.url }}\media\nasa\nebula_2.png" lat="Nebula photo 2"/>
+
+<img src="{{ site.url }}\media\nasa\nebula_1.png" lat="Nebula photo 1"/>

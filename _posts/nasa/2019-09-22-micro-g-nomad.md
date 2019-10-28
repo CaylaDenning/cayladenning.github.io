@@ -14,6 +14,6 @@ The device must be manually operated, collect 9 in2 of particulate from a minimu
 
 During NBL testing, the device performed well and was successful at meeting all the challenge deliverables, it exceeded the expected limitations/obstacles. When the divers were giving feedback they mainly stuck to compliments and small suggestions such as the overall length of the device. They liked the ergonomic design and ease of use the device provided for them. When operated properly, the device provided fulfilled the given requirements with minimal guidance required. 
 
+<img src="{{ site.url }}\media\nasa\nomand_rail.JPG" lat="Nomad photo 2" style="width:500px;"/>
 
 <img src="{{ site.url }}\media\nasa\nomand_1.png" lat="Nomad photo 1"/>
-<img src="{{ site.url }}\media\nasa\nomand_rail.JPG" lat="Nomad photo 2" style="width:500px;"/>

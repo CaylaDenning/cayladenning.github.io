@@ -2,8 +2,29 @@
 layout: default
 ---
 
-<div id="about">
-  <h1>Cayla Denning</h1>
+<script>
+window.onload = function() {
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+};
+</script>
+
+<div class="about">
+    <div id="mainContent">
+
+  <h1 class="center-text">Cayla Denning</h1>
   <p>
       Hello! 
       I am Cayla Denning, a mechanical engineering graduate looking to expand experience in the engineering field. My interests are in environmentally conscious projects, with an emphasis in R&D, testing, and analysis. I am qualified by experience with prototype design, professional research projects and additive manufacturing. My availability starts January 20, 2020, and I am willing to relocate.      
@@ -11,4 +32,52 @@ layout: default
   <p>
   I work with FDM, SLA, SLS, LCD, DLP, and GMB type printers. My main printers are the Lulzbot TAZ 6, Zmorph VX and Sintratec SLS. I have printed with PLA, ABS, TPU, PVA, PMMA, Copper, Sintratec powders, Peopoly resins, and many other custom made filaments, resins and powders.  Although I love additive manufacturing research, my passion is in sustainable energy. 
   </p>
+  </div>
 </div> <!-- End about -->
+
+
+<button class="accordion research"><h1 class="center-text"><div id="navText"><i class="material-icons">school</i> Research</div></h1> </button>
+<div class="panel research-content">
+  <div id="mainContent">
+      {% for post in site.categories.Research %}  
+      <!--- IF Post is in research category -->
+      <h2>{{ post.title }}</h2>
+      <p> {{ post.content }} </p>
+      <br>
+    {% endfor %}
+  </div>
+
+</div>
+
+
+  
+<button class="accordion nasa"><h1 class="center-text"><div id="navText"><i class="material-icons">brightness_3</i> NASA Projects</div></h1></button>
+<div class="panel nasa-content">
+
+  <div id="mainContent">
+        {% for post in site.categories.NASA %}  
+
+        <!--- IF Post is in research category -->
+        <h2>{{ post.title }}</h2>
+      
+          <p> {{ post.content }} </p>
+          <br>
+        {% endfor %}
+  </div>
+
+</div>
+
+  
+<button class="accordion volunteer"><h1 class="center-text"><div id="navText"><i class="material-icons">people</i> Volunteer Work</div></h1></button>
+<div class="panel volunteer-content">
+    <div id="mainContent">
+    {% for post in site.categories.Volunteer %}  
+
+    <!--- IF Post is in research category -->
+    <h2>{{ post.title }}</h2>
+  
+      <p> {{ post.content }} </p>
+      <br>
+    {% endfor %}
+    </div>
+</div>

@@ -1,26 +1,107 @@
 @import url('https://fonts.googleapis.com/css?family=Jomolhari|Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:700&display=swap');
+
+/* 
+----- Color Pallete ---- 
+Dark Pink   #A64962
+Blue        #50B4F2
+Green       #BBBF3F
+Brown       #F2B872
+Light Pink  #F2A7A7
+*/
 
 * {
-  font-family: 'Merriweather', serif;
+  font-family: 'Noto Serif', serif;
+}
+
+:root {
+  --main-bg-color: #c5a880;
+  --about-bg-color: #F2A7A7;
+  --research-bg-color: #4a6361;
+  --nasa-bg-color: #5a9bab;
+  --volunteer-bg-color: #6b9372;
+}
+
+.about {
+  background-color: var(--main-bg-color);
+}
+
+.research {
+  background-color: var(--research-bg-color);
+}
+
+.research-content {
+  background-color: var(--research-bg-color);
+}
+
+.nasa {
+  background-color: var(--nasa-bg-color);
+}
+
+.nasa-content {
+  background-color: var(--nasa-bg-color);
+}
+
+.volunteer {
+  background-color: var(--volunteer-bg-color);
+}
+
+.volunteer-content {
+    background-color: var(--volunteer-bg-color);
+
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border:none;
+
+  outline: none;
+  transition: 1s;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  /* padding: 0 18px; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+}
+
+.accordion:after {
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+
+.center-text {
+  text-align: center;
 }
 
 body {
-  overflow-x:hidden;
-  background-color: white;
+  /* overflow-x:hidden; */
+  background-color: var(--main-bg-color);
 }
 
 h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
   opacity: 0.95;
+  color: #fff;
 }
 
 p, ul, li {
-  font-family: 'Jomolhari', serif;
+  font-family: 'Noto Serif', serif;
   opacity: 0.8;
   line-height: 1.6;
   font-size: 18px;
+  color: #FFF;
 }
 
+/* Center images */
 img {
   display: block;
   margin-left: auto;
@@ -42,89 +123,15 @@ img {
   justify-content: center;
 }
 
-/** CSS transitions from here: https://codepen.io/EvyatarDa/pen/waKXMd */
-div.container {
-    top: 0;
-    width: 100%;
-    position: sticky;
-    background-color: white;
-    z-index: 500;
-    margin: 0 auto;
-  	padding-top: 2em;
-    padding-bottom: 2em;
-  	text-align: center;
-    border-bottom: 3px solid rgba(0, 0, 0, .9);
-}
-
-div.container a {
-    text-decoration: none;
-    font-family: 'Merriweather', serif;
-    font-size: 18px;
-    margin: 0px 8px;
-    padding: 8px 8px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-}
-
-div.borderXwidth a:before, div.borderXwidth a:after {
-    position: absolute;
-    opacity: 0;
-    width: 0%;
-    height: 2px;
-    content: '';
-    background: #000;
-    transition: all 0.3s;
-}
-
-div.borderXwidth a:before {
-    left: 0px;
-    top: 0px;
-}
-
-div.borderXwidth a:after {
-    right: 0px;
-    bottom: 0px;
-}
-
-div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
-    opacity: 0.7;
-    width: 100%;
-}
 
 /* Main Content */
 #mainContent {
   width: 800px;
-  padding-left: 50px;
-  padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-#projectBanner {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Link styles */
-a {
-  color: #211eb4;
-  font-family: 'Open Sans', sans-serif;
-  opacity: 0.8;
-  z-index: 10; /*or whatever number that is a positive real number. */
-  transition: color .3s ease;
-  -moz-transition: color .3s ease;
-}
-
-a:hover {
-  color: #d60568;
-}
-
-a:active {
-  color: #d60568;
-}
 
 /* Footer */
 footer {
@@ -139,7 +146,7 @@ footer img {
   height: 28px;
   padding-left: 5px;
   padding-right: 5px;
-  filter: brightness(0%) opacity(70%);
+  filter: brightness(100%) opacity(70%);
 }
 
 /* Tablet kinda adjustments */
