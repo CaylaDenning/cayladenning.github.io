@@ -1,32 +1,14 @@
+This is Cayla's personal website hosted at [cayladenning.me](https://cayladenning.me/), nothing too fancy. 
+
 ## Getting Started writting Posts
 
-For Ubuntu, use the following commands to install jekyll and ruby
+# Running a server locally
 
-`sudo apt-get install ruby ruby-dev build-essential`
+I've setup a docker file which will run the jekyll web server on `localhost:4000`. You can
+run it with the following commands: 
 
-```
-echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-echo 'export GEM_HOME=$HOME/gems' >> ~/.bashrc
-echo 'export PATH=$HOME/gems/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
+```console
+docker-compose up
 ```
 
-`gem install jekyll bundler`
-
-`gem sources --add https://rubygems.org/`
-
-
-Confirm your ruby install
-
-`ruby -v`
-
-
-If you run into issues try this command:
-
-`bundle update jekyll`
-
-`gem update jekyll`
-
-To run Jekyll
-
-`jekyll serve --watch`
+All done!
