@@ -8,6 +8,10 @@ layout: page
         <i class="material-icons topic-title-icon">{{ page.topicIcon }}</i>{{ page.title }}
     </h1>
 
+    {% if page.subtitle %}
+    <h3 class="topic-page-subtitle">{{ page.subtitle }}</h3>
+    {% endif %}
+
     {% for post in site.posts %}
 
         {% if post.path contains page.postFolder %}
@@ -36,7 +40,7 @@ layout: page
     
     <!-- Display a little block to take you home! -->
     <div class="topic-cards">
-        <div class="topic-card research-card" onclick="location.href='{{"/research.html" | relative_url }}';">
+        <div class="topic-card research-card" onclick="location.href='{{"/" | relative_url }}';">
             <h2 class="research-card">
                 <i class="material-icons research-card card-icon">home</i>
                 <a class="topic-title" href="{{ "/" | relative_url }}">Home</a>

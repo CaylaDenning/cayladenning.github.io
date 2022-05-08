@@ -139,6 +139,11 @@ a {
   color: var(--large-header-text-color);
 }
 
+.topic-page-subtitle {
+  text-align: center;
+  color: var(--accent-green);
+}
+
 .topic-title-icon {
   background-color: var(--main-bg-color);
   color: var(--large-header-text-color);
