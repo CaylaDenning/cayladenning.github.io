@@ -52,6 +52,12 @@ p, ul, li {
   margin-right: auto;
 }
 
+.core-container img {
+  width:100%;
+  max-width:300px;
+  display: inline-flex;
+}
+
 #bannerContainer {
   text-align: center;
 }

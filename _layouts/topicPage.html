@@ -27,9 +27,23 @@ layout: page
 
             <!-- The post content -->
             <div class="post-content">{{ post.content }}</div>
+            <hr>
 
         {% endif %}
 
     {% endfor %}
+
+    
+    <!-- Display a little block to take you home! -->
+    <div class="topic-cards">
+        <div class="topic-card research-card" onclick="location.href='{{"/research.html" | relative_url }}';">
+            <h2 class="research-card">
+                <i class="material-icons research-card card-icon">home</i>
+                <a class="topic-title" href="{{ "/" | relative_url }}">Home</a>
+            </h2>
+        </div>
+
+        <!-- TODO: Make a little loop of all the topics, maybe have some json with all the options? -->
+    </div>
 
 </div>
