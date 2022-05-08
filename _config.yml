@@ -6,6 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "//cayladenning.me"
 
+author: Cayla Denning
 linkedin_username: cayla-denning-170237114
 
 # Build settings

@@ -1,0 +1,32 @@
+---
+layout: page
+---
+
+<!-- Put all posts from inside the specified post folders folder here -->
+<div class="core-container">
+
+    {% for post in site.posts %}
+
+        {% if post.path contains page.postFolder %}
+
+            <h4 class="post-title">{{ post.title }}</h4>
+
+            {% if post.subtitle %}
+                <h5 class="post-subtitle">{{ post.subtitle }}</h5>
+            {% endif %}
+
+            <!-- Show the image related to this position if there is one -->
+            {% if post.banner-image %}
+                <div id="bannerContainer">
+                    <img id="projectBanner" src={{ post.banner-image }} />
+                </div>
+            {% endif %}
+
+            <!-- The post content -->
+            <div class="post-content">{{ post.content }}</div>
+
+        {% endif %}
+
+    {% endfor %}
+
+</div>

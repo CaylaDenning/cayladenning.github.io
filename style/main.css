@@ -1,139 +1,80 @@
-@import url('https://fonts.googleapis.com/css?family=Jomolhari|Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap');
 
-/* 
------ Color Pallete ---- 
-Dark Pink   #A64962
-Blue        #50B4F2
-Green       #BBBF3F
-Brown       #F2B872
-Light Pink  #F2A7A7
-*/
+/* CSS Style Variables */
+/*****************************************************/
+
+:root {
+  --main-bg-color: #e8dfe0;
+  --accent-green: #8d9b6a;
+  --accent-blue:#8a9ea7;
+  --accent-light-brown:#dab692;
+  --accent-dark-brown: #8f5b34;
+}
+
+/** Core styling */
+/*****************************************************/
 
 * {
   font-family: 'Noto Serif', serif;
-}
-
-:root {
-  --main-bg-color: #c5a880;
-  --about-bg-color: #F2A7A7;
-  --research-bg-color: #4a6361;
-  --nasa-bg-color: #5a9bab;
-  --volunteer-bg-color: #6b9372;
-}
-
-.about {
+  color:var(--accent-green);
   background-color: var(--main-bg-color);
-}
-
-.research {
-  background-color: var(--research-bg-color);
-}
-
-.research-content {
-  background-color: var(--research-bg-color);
-}
-
-.nasa {
-  background-color: var(--nasa-bg-color);
-}
-
-.nasa-content {
-  background-color: var(--nasa-bg-color);
-}
-
-.volunteer {
-  background-color: var(--volunteer-bg-color);
-}
-
-.volunteer-content {
-    background-color: var(--volunteer-bg-color);
-
-}
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border:none;
-
-  outline: none;
-  transition: 1s;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  /* padding: 0 18px; */
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-
-}
-
-.accordion:after {
-  font-size: 13px;
-  float: right;
-  margin-left: 5px;
-}
-
-.center-text {
-  text-align: center;
 }
 
 body {
-  /* overflow-x:hidden; */
   background-color: var(--main-bg-color);
+  overflow-x:hidden;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Merriweather', serif;
-  opacity: 0.95;
-  color: #fff;
+  font-family: 'Open Sans', serif;
+  opacity: 1.0;
+  color: var(--accent-green);
 }
 
 p, ul, li {
-  font-family: 'Noto Serif', serif;
-  opacity: 0.8;
-  line-height: 1.6;
-  font-size: 18px;
-  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0.9;
+  color: black;
+  font-size: 16px;
 }
-
-/* Center images */
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  padding: 10px;
-}
-
-.container.borderXwidth a div#navText {
-  display: flex;
-}
-
-#navText .material-icons {
-  padding-right: .125em;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-}
-
 
 /* Main Content */
-#mainContent {
+.pageContent {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: var(--main-bg-color);
+}
+
+.core-container {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
+#bannerContainer {
+  text-align: center;
+}
+
+
+/* Link styles */
+/*****************************************************/
+
+a {
+  color: var(--accent-green);
+}
+
+/* Topic Cards */
+/*****************************************************/
+
+.topic-cards {
+  text-align: center;
+}
 
 /* Footer */
+/*****************************************************/
+
 footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -141,59 +82,53 @@ footer {
   text-align: center;
 }
 
-footer img {
-  width: 28px;
-  height: 28px;
-  padding-left: 5px;
-  padding-right: 5px;
-  filter: brightness(100%) opacity(70%);
-}
+/* Platform Adjustments */
+/*****************************************************/
 
 /* Tablet kinda adjustments */
 @media screen and (max-width: 910px) {
-    #mainContent {
-        width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-left: 0;
-        margin-right: 0;
-    }
+  #mainContent {
+      width: 95%;
+  }
 
-    .container.borderXwidth a div#navText {
-      display: block;
-    }
-    
-    .container {
-      display: block;
-    }
+#projectBanner {
+  width: 300px;
+}
+
+.feat-img {
+  width: 270px;
+}
 }
 
 /** Moible adjustments */
 @media screen and (max-width: 400px) {
-    .nav-items {
-        text-align: center;
-    }
+  .nav-items {
+      text-align: center;
+  }
 
-    .nav-bucket {
-        padding: 5px;
-        float: none;
-    }
-    
-    #mainContent {
-        width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
+  .nav-bucket {
+      padding: 5px;
+      float: none;
+  }
 
-    #mainContent img {
-        width: 270px;
-    }
+  #mainContent {
+      width: 95%;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
 
-    .container.borderXwidth a div#navText {
-      display: block;
-    }
-    
-    .container {
-      display: block;
-    }
+  #projectBanner {
+    width: 270px;
+  }
+  .feat-img {
+    width: 270px;
+  }
+  
+  footer img {
+    width: 28px;
+    height: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+    filter: brightness(0%) opacity(70%);
+  }
 }
