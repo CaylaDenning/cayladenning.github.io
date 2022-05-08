@@ -2,23 +2,23 @@
 layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<div class="core-container">
+  
 
-<div class="container">
-  <h1>404</h1>
+  <h1 class="topic-page-title">
+    <i class="material-icons topic-title-icon">error</i>Error: 404
+  </h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <!-- Display a little block to take you home! -->
+  <div class="topic-cards">
+    <div class="topic-card research-card" onclick="location.href='{{"/research.html" | relative_url }}';">
+        <h2 class="research-card">
+            <i class="material-icons research-card card-icon">home</i>
+            <a class="topic-title" href="{{ "/" | relative_url }}">Home</a>
+        </h2>
+    </div>
+
+    <!-- TODO: Make a little loop of all the topics, maybe have some json with all the options? -->
+</div>
+  
 </div>
