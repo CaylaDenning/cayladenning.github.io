@@ -3,7 +3,10 @@ layout: page
 ---
 
 <!-- Put all posts from inside the specified post folders folder here -->
-<div class="core-container">
+<div class="core-container">    
+    <h1 class="topic-page-title">
+        <i class="material-icons topic-title-icon">{{ page.topicIcon }}</i>{{ page.title }}
+    </h1>
 
     {% for post in site.posts %}
 
