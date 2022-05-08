@@ -1,11 +1,13 @@
 ---
-layout: page
+layout: homePage
 title: Cayla Denning
 description: Engineer
 ---
 
-
 <div class="core-container">
+
+  <h1>Cayla Denning</h1>
+  <h3>Mechanical Engineer</h3>
 
   <p>
     Hello! I am Cayla Denning, a mechanical engineering graduate looking to expand experience in the engineering field. My interests are in environmentally conscious projects, with an emphasis in R&D, testing, and analysis. I am qualified by experience with prototype design, professional research projects and additive manufacturing. My availability starts January 20, 2020, and I am willing to relocate.
@@ -15,21 +17,31 @@ description: Engineer
     I work with FDM, SLA, SLS, LCD, DLP, and GMB type printers. My main printers are the Lulzbot TAZ 6, Zmorph VX and Sintratec SLS. I have printed with PLA, ABS, TPU, PVA, PMMA, Copper, Sintratec powders, Peopoly resins, and many other custom made filaments, resins and powders. Although I love additive manufacturing research, my passion is in sustainable energy. 
   </p>
 
+  <h2 class="topic-section-heading">What I do</h2>
 
   <!-- Begin a container of "topic cards", which are the little tiles with links to NASA, research, and volunteer work -->
   <div class="topic-cards">
 
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{{ "/research.html" | relative_url }}"><i class="material-icons">school</i>Research</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ "/nasa.html" | relative_url }}"><i class="material-icons">brightness_3</i>NASA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{"/volunteer.html" | relative_url }}"><i class="material-icons">people</i>Volunteer</a>
-      </li>
-    </ul>
+    <div class="topic-card research-card" onclick="location.href='{{"/research.html" | relative_url }}';">
+      <h2 class="research-card">
+        <i class="material-icons research-card card-icon">school</i>
+        <a class="topic-title" href="{{ "/research.html" | relative_url }}">Research</a>
+      </h2>
+    </div>
+  
+    <div class="topic-card nasa-card" onclick="location.href='{{"/nasa.html" | relative_url }}';">
+      <h2 class="nasa-card">
+        <i class="material-icons nasa-card card-icon">rocket_launch</i>
+        <a class="topic-title" href="{{ "/nasa.html" | relative_url }}">NASA</a>
+      </h2>
+    </div>
+    
+    <div class="topic-card volunteer-card " onclick="location.href='{{"/volunteer.html" | relative_url }}';">
+      <h2 class="volunteer-card">
+        <i class="material-icons volunteer-card card-icon">emoji_people</i>
+        <a class="topic-title" href="{{"/volunteer.html" | relative_url }}">Volunteer</a>
+      </h2>
+    </div>
 
   </div>
   <!-- End of div class="topic-cards" -->

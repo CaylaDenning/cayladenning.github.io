@@ -9,6 +9,11 @@
   --accent-blue:#8a9ea7;
   --accent-light-brown:#dab692;
   --accent-dark-brown: #8f5b34;
+  --accent-white:white;
+
+  --main-text-color:black;
+  --large-header-text-color: var(--accent-blue);
+  --small-header-text-color: var(--accent-green);
 }
 
 /** Core styling */
@@ -22,41 +27,34 @@
 
 body {
   background-color: var(--main-bg-color);
-  overflow-x:hidden;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: 'Open Sans', serif;
-  opacity: 1.0;
-  color: var(--accent-green);
+  color: var(--large-header-text-color);
+}
+
+h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--small-header-text-color);
 }
 
 p, ul, li {
   font-family: 'Open Sans', sans-serif;
-  opacity: 0.9;
-  color: black;
+  color: var(--main-text-color);
   font-size: 16px;
 }
 
-/* Main Content */
-.pageContent {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  background-color: var(--main-bg-color);
-}
-
+/* The core content is the content on the end page */
 .core-container {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
 }
 
 #bannerContainer {
   text-align: center;
 }
-
 
 /* Link styles */
 /*****************************************************/
@@ -70,15 +68,83 @@ a {
 
 .topic-cards {
   text-align: center;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.topic-section-heading {
+  text-align: center;
+}
+
+.topic-title {
+  color:var(--accent-white);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.topic-card {
+  display: inline-block;
+  width: 25%;
+  padding: 15px;
+  margin: 0 auto;
+  margin-right: 25px;
+  margin-top: 15px;
+  height: 100px;
+  text-align: center;
+  cursor: pointer;
+
+  /* Make the cards display rounded */
+  border-radius: 25px;
+}
+
+/* Colors for projects */
+.research-card {
+  background-color: var(--accent-blue);
+  background-size: cover;
+}
+
+.research-card i {
+  color: var(--accent-white);
+}
+
+.nasa-card {
+  background-color:var(--accent-light-brown);
+}
+
+.nasa-card i {
+  color: var(--accent-white);
+}
+
+.volunteer-card {
+  background-color:var(--accent-dark-brown);
+}
+
+.volunteer-card i {
+  color: var(--accent-white);
+}
+
+.card-icon {
+  display: block;
+}
+
+/* Topic Pages */
+/*****************************************************/
+.topic-page-title {
+  text-align: center;
+  color: var(--large-header-text-color);
+}
+
+.topic-title-icon {
+  background-color: var(--main-bg-color);
+  color: var(--large-header-text-color);
+  display: inline-block;
+  padding-right: 25px;
+  font-size: 32px;
 }
 
 /* Footer */
 /*****************************************************/
 
 footer {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 50px;
   text-align: center;
 }
 
@@ -87,31 +153,28 @@ footer {
 
 /* Tablet kinda adjustments */
 @media screen and (max-width: 910px) {
-  #mainContent {
+  .core-container {
       width: 95%;
   }
 
-#projectBanner {
-  width: 300px;
+  #projectBanner {
+    width: 300px;
+  }
+
+  .feat-img {
+    width: 270px;
+  }
+
+   /* This will make the cards vertical on mobile */
+   .topic-card {
+    display: block;
+  }
 }
 
-.feat-img {
-  width: 270px;
-}
-}
-
-/** Moible adjustments */
+/** Mobile adjustments */
 @media screen and (max-width: 400px) {
-  .nav-items {
-      text-align: center;
-  }
 
-  .nav-bucket {
-      padding: 5px;
-      float: none;
-  }
-
-  #mainContent {
+  .core-container {
       width: 95%;
       padding-left: 5px;
       padding-right: 5px;
@@ -120,15 +183,10 @@ footer {
   #projectBanner {
     width: 270px;
   }
-  .feat-img {
-    width: 270px;
+
+  /* This will make the cards vertical on mobile */
+  .topic-card {
+    display: block;
   }
   
-  footer img {
-    width: 28px;
-    height: 28px;
-    padding-left: 5px;
-    padding-right: 5px;
-    filter: brightness(0%) opacity(70%);
-  }
-}
+} 
