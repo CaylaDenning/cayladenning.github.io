@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Oxygen:wght@700&display=swap');
 
 /* CSS Style Variables */
 /*****************************************************/
@@ -20,7 +20,7 @@
 /*****************************************************/
 
 * {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Oxygen', sans-serif;
   color:var(--accent-green);
   background-color: var(--main-bg-color);
 }
@@ -30,19 +30,24 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Open Sans', serif;
+  font-family: 'Oxygen', sans-serif;
   color: var(--large-header-text-color);
 }
 
 h3, h4 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Amiri', serif;
   color: var(--small-header-text-color);
 }
 
 p, ul, li {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Amiri', serif;
   color: var(--main-text-color);
-  font-size: 16px;
+  /* 
+  * Line spacing should be about 1.5 times the font size. If you change the font
+  * size then update the line spacing as well 
+  */
+  font-size: 18px;
+  line-height: 27pt;
 }
 
 /* The core content is the content on the end page */
