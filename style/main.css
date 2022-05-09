@@ -67,6 +67,12 @@ p, ul, li {
   text-align: center;
 }
 
+.picture-wrapper {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .profile-pic-wrapper {
   text-align: center;
   padding-top: 25px;
