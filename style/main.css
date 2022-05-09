@@ -179,6 +179,7 @@ footer {
    /* This will make the cards vertical on mobile */
    .topic-card {
     display: block;
+    width: 85%;
   }
 }
 
@@ -198,6 +199,7 @@ footer {
   /* This will make the cards vertical on mobile */
   .topic-card {
     display: block;
+    width: 85%;
   }
   
 } 
